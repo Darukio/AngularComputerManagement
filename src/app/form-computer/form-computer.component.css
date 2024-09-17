@@ -1,0 +1,60 @@
+/* Styles for the listing-apply section */
+.listing-apply {
+    background: var(--accent-color);
+    border-radius: 30px;
+    padding: 20px;
+    margin: 20px 0;
+  }
+  
+  .listing-apply .section-heading {
+    font-size: 24pt;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+  }
+  
+  .listing-apply label {
+    display: block;
+    font-size: 14pt;
+    color: var(--secondary-color);
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+  
+  .listing-apply input {
+    font-size: 16pt;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 500px;
+    border: solid 1px var(--primary-color);
+    border-radius: 8px;
+    box-sizing: border-box;
+  }
+  
+  .listing-apply button {
+    padding: 10px 20px;
+    border: none;
+    background: var(--primary-color);
+    color: white;
+    font-size: 16pt;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .listing-apply button:hover {
+    background: darken(var(--primary-color), 10%);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .listing-apply input {
+      width: 100%;
+    }
+  
+    .listing-apply button {
+      width: 100%;
+    }
+  }
+  

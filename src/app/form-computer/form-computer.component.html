@@ -1,0 +1,16 @@
+<section class="listing-apply">
+    <h2 class="section-heading">Submit a new computer</h2>
+    <form [formGroup]="applyForm" (submit)="submitNewComputer()">
+        <label for="brand">Brand</label>
+        <input id="brand" type="text" formControlName="brand" /><br />
+        <label for="model">Model</label>
+        <input id="model" type="text" formControlName="model" /><br />
+        <label for="processor">Processor</label>
+        <input id="processor" type="text" formControlName="processor" /><br />
+        <label for="ram">RAM</label>
+        <input id="ram" type="text" formControlName="ram" /><br />
+        <label for="storage">Storage</label>
+        <input id="storage" type="text" formControlName="storage" /><br />
+        <button type="submit" class="primary">Submit</button>
+    </form>
+</section>
