@@ -1,12 +1,16 @@
-<section>
-    <form>
-        <input type="text" placeholder="Filter by brand" #filter>
-        <button class="primary" type="button" (click)="filterResults(filter.value)">Search</button>
-    </form>
-</section>
-<section class="results">
-    <app-computer *ngFor="let computer of filteredComputerList" [computer]="computer"></app-computer>
-</section>
-<section class="form-computer">
-    <app-form-computer></app-form-computer>
-</section>
+<mat-tab-group>
+    <mat-tab label="List Computers">
+        <section>
+            <form>
+                <input type="text" placeholder="Filter by brand" #filter>
+                <button class="primary" type="button" (click)="filterResults(filter.value)">Search</button>
+            </form>
+        </section>
+        <section class="results">
+            <app-computer *ngFor="let computer of filteredComputerList" [computer]="computer"></app-computer>
+        </section>
+    </mat-tab>
+    <mat-tab label="Manage Computer">
+        <app-form-computer></app-form-computer>
+    </mat-tab>
+</mat-tab-group>

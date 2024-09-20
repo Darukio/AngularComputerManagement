@@ -1,0 +1,15 @@
+<article>
+    <section class="listing-description">
+        <h2 class="listing-heading">Computer ID: {{ computer?.id }}</h2>
+        <p class="listing-computer">{{ computer?.brand }} {{ computer?.model }}</p>
+    </section>
+    <section class="listing-features">
+        <h2 class="section-heading">About this Computer</h2>
+        <ul>
+            <li><strong>Processor:</strong> {{ computer?.processor }}</li>
+            <li><strong>RAM:</strong> {{ computer?.ram }}</li>
+            <li><strong>Storage:</strong> {{ computer?.storage }}</li>
+            <li><strong>Entry Date:</strong> {{ computer?.entryDate }}</li>
+        </ul>
+    </section>
+</article>

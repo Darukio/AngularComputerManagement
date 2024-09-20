@@ -7,8 +7,8 @@ import { RouterLink, RouterOutlet } from '@angular/router';
   selector: 'app-computer',
   standalone: true,
   imports: [ CommonModule, RouterLink, RouterOutlet ],
-  templateUrl: './computer.component.html',
-  styleUrl: './computer.component.css'
+  templateUrl: './list-computer.component.html',
+  styleUrl: './list-computer.component.css'
 })
 export class ComputerComponent {
   @Input() computer!: Computer;

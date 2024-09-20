@@ -1,0 +1,55 @@
+.listing-photo {
+  height: 600px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 30px;
+}
+
+.listing-heading {
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.listing-computer {
+  font-size: 20px;
+  color: var(--text-color);
+  margin-bottom: 15px;
+}
+
+.listing-features > .section-heading {
+  color: var(--secondary-color);
+  font-size: 24pt;
+  margin-bottom: 15px;
+}
+
+.listing-features {
+  margin-bottom: 20px;
+}
+
+.listing-features li {
+  font-size: 14pt;
+  color: var(--text-color);
+}
+
+li {
+  list-style-type: none;
+}
+
+label {
+  color: var(--secondary-color);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12pt;
+}
+
+input {
+  font-size: 16pt;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: none;
+  border-bottom: solid 1px var(--primary-color);
+  color: var(--text-color);
+  background-color: var(--background-color);
+}

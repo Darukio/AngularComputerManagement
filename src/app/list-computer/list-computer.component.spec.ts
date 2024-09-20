@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ComputerComponent } from './computer.component';
+import { ComputerComponent } from './list-computer.component';
 
 describe('ComputerComponent', () => {
   let component: ComputerComponent;

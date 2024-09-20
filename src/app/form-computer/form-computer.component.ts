@@ -1,36 +1,82 @@
 import { Component, inject } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
-import { ComputerService } from '../computer.service';
+import { ReactiveFormsModule, FormBuilder, Validators } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { ComputerService } from '../services/computer.service';
 import { Computer } from '../computer';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-form-computer',
-  standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './form-computer.component.html',
-  styleUrl: './form-computer.component.css'
+  styleUrls: ['./form-computer.component.css'],
+  standalone: true,
+  imports: [
+    CommonModule,
+    MatInputModule,
+    MatButtonModule,
+    MatCardModule,
+    ReactiveFormsModule
+  ]
 })
 export class FormComputerComponent {
-  applyForm = new FormGroup({
-    brand: new FormControl(''),
-    model: new FormControl(''),
-    processor: new FormControl(''),
-    ram: new FormControl(''),
-    storage: new FormControl(''),
+  private fb = inject(FormBuilder);
+  computerForm = this.fb.group({
+    id: ['', Validators.required],
+    brand: ['', Validators.required],
+    model: ['', Validators.required],
+    processor: ['', Validators.required],
+    ram: ['', Validators.required],
+    storage: ['', Validators.required],
   });
 
-  route: ActivatedRoute = inject(ActivatedRoute);
   computerService = inject(ComputerService);
 
-  submitNewComputer() {
-    this.computerService.submitNewComputer(
-      this.applyForm.value.brand ?? '',
-      this.applyForm.value.model ?? '',
-      this.applyForm.value.processor ?? '',
-      this.applyForm.value.ram ?? '',
-      this.applyForm.value.storage ?? '',
-    );
+  async submitNewComputer() {
+    const newComputer: Computer = {
+      id: '', // Se generará automáticamente
+      brand: this.computerForm.value.brand ?? '',
+      model: this.computerForm.value.model ?? '',
+      processor: this.computerForm.value.processor ?? '',
+      ram: this.computerForm.value.ram ?? '',
+      storage: this.computerForm.value.storage ?? '',
+      entryDate: new Date().toISOString(),
+    };
+
+    await this.computerService.submitNewComputer(newComputer);
+    this.computerForm.reset(); // Limpiar el formulario después de enviar
+  }
+
+  async updateComputer() {
+    const id = this.computerForm.value.id;
+    if (!id) {
+      alert("Please enter a valid ID to update.");
+      return;
+    }
+
+    const updatedComputer: Computer = {
+      id: id,
+      brand: this.computerForm.value.brand ?? '',
+      model: this.computerForm.value.model ?? '',
+      processor: this.computerForm.value.processor ?? '',
+      ram: this.computerForm.value.ram ?? '',
+      storage: this.computerForm.value.storage ?? '',
+      entryDate: new Date().toISOString(), // O conservar la fecha original
+    };
+
+    await this.computerService.updateComputer(updatedComputer);
+    this.computerForm.reset(); // Limpiar el formulario después de actualizar
+  }
+
+  async deleteComputer() {
+    const id = this.computerForm.value.id;
+    if (!id) {
+      alert("Please enter a valid ID to delete.");
+      return;
+    }
+
+    await this.computerService.deleteComputer(id);
+    this.computerForm.reset(); // Limpiar el formulario después de eliminar
   }
 }

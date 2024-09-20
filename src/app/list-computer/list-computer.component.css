@@ -1,0 +1,49 @@
+.listing {
+  background: var(--background-color);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.listing-heading {
+  color: var(--primary-color);
+  padding: 10px 20px;
+  font-size: 1.5em;
+  border-bottom: 2px solid var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.listing-photo {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 30px 30px 0 0;
+  margin-bottom: 15px;
+}
+
+.listing-computer {
+  padding: 10px 20px;
+  font-size: 1em;
+  color: var(--text-color);
+}
+
+section.listing a {
+  display: inline-flex;
+  align-items: center;
+  padding-left: 20px;
+  text-decoration: none;
+  color: var(--primary-color);
+  font-size: 1em;
+  transition: color 0.3s ease;
+}
+
+section.listing a:hover {
+  color: var(--secondary-color);
+}
+
+section.listing a::after {
+  content: "\203A";
+  margin-left: 5px;
+}

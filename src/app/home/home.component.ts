@@ -1,14 +1,15 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ComputerComponent } from '../computer/computer.component';
-import { ComputerService } from '../computer.service';
+import { ComputerComponent } from '../list-computer/list-computer.component';
+import { ComputerService } from '../services/computer.service';
 import { Computer } from '../computer';
 import { FormComputerComponent } from '../form-computer/form-computer.component';
+import { MatTabsModule } from '@angular/material/tabs';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, ComputerComponent, FormComputerComponent],
+  imports: [CommonModule, MatTabsModule, ComputerComponent, FormComputerComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

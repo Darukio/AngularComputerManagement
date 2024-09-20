@@ -1,24 +1,64 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global styles */
 * {
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    font-family: 'Be Vietnam Pro', sans-serif;
-  }
-  :root {
-    --primary-color: #212738;
-    --secondary-color: #6E7DAB;
-    --accent-color: #e8e7fa;
-    --shadow-color: #E8E8E8;
-  }
-  
-  button.primary {
-    padding: 10px;
-    border: solid 1px var(--primary-color);
-    background: var(--primary-color);
-    color: white;
-    border-radius: 8px;
-  }
-  
+  margin: 0;
+  padding: 0;
+}
+
+.mat-mdc-card
+{
+  background-color: var(--background-color) !important;
+}
+
+.mdc-button {
+  background-color: white !important;
+  color: var(--secondary-color) !important;
+  border-radius: 0px !important;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.mat-card {
+  background-color: var(--background-color) !important;
+  color: var(--text-color);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.mat-mdc-tab .mdc-tab-indicator__content--underline
+{
+  border-color: #F79824 !important;
+}
+
+.mdc-tab__text-label {
+  color: #FFFFFF !important;
+}
+
+body {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+:root {
+  --primary-color: #F79824; /* Color principal */
+  --secondary-color: #6E7DAB; /* Color secundario */
+  --background-color: #212738; /* Color de fondo */
+  --text-color: #FFFFFF; /* Color de texto */
+}
+
+button.primary {
+  padding: 10px;
+  border: none;
+  background: var(--primary-color);
+  color: var(--text-color);
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+button.primary:hover {
+  background: var(--secondary-color);
+}
+
+html, body {
+  height: 100%;
+}

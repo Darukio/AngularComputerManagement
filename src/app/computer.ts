@@ -1,5 +1,5 @@
 export interface Computer {
-    id: number;
+    id?: string;
     brand: string;
     model: string;
     processor: string;

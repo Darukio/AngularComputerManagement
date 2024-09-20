@@ -1,17 +1,20 @@
 :host {
   --content-padding: 10px;
 }
+
 header {
   display: block;
   height: 80px;
   padding: var(--content-padding);
   box-shadow: 0px 5px 25px var(--shadow-color);
+  background-color: #ffffff;
 }
+
 .content {
   padding: var(--content-padding);
 }
 
 .brand-logo {
-    width: 200px; /* Ajusta el ancho según sea necesario */
-    height: auto; /* Mantiene la proporción del logo */
-  }
+  width: 200px;
+  height: auto;
+}

@@ -1,16 +1,67 @@
 <section class="listing-apply">
-    <h2 class="section-heading">Submit a new computer</h2>
-    <form [formGroup]="applyForm" (submit)="submitNewComputer()">
-        <label for="brand">Brand</label>
-        <input id="brand" type="text" formControlName="brand" /><br />
-        <label for="model">Model</label>
-        <input id="model" type="text" formControlName="model" /><br />
-        <label for="processor">Processor</label>
-        <input id="processor" type="text" formControlName="processor" /><br />
-        <label for="ram">RAM</label>
-        <input id="ram" type="text" formControlName="ram" /><br />
-        <label for="storage">Storage</label>
-        <input id="storage" type="text" formControlName="storage" /><br />
-        <button type="submit" class="primary">Submit</button>
-    </form>
+  <h2 class="section-heading">Manage a Computer</h2>
+  <form [formGroup]="computerForm" (ngSubmit)="submitNewComputer()">
+    <mat-card class="computer-card">
+      <mat-card-header>
+        <mat-card-title>Computer Information</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <mat-form-field appearance="fill">
+          <mat-label>ID (for update/delete)</mat-label>
+          <input matInput formControlName="id" placeholder="Enter ID">
+          <mat-error *ngIf="computerForm.controls['id'].hasError('required')">
+            ID is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+        <br />
+        <mat-form-field appearance="fill">
+          <mat-label>Brand</mat-label>
+          <input matInput formControlName="brand" placeholder="Brand">
+          <mat-error *ngIf="computerForm.controls['brand'].hasError('required')">
+            Brand is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+        <br />
+        <mat-form-field appearance="fill">
+          <mat-label>Model</mat-label>
+          <input matInput formControlName="model" placeholder="Model">
+          <mat-error *ngIf="computerForm.controls['model'].hasError('required')">
+            Model is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+        <br />
+        <mat-form-field appearance="fill">
+          <mat-label>Processor</mat-label>
+          <input matInput formControlName="processor" placeholder="Processor">
+          <mat-error *ngIf="computerForm.controls['processor'].hasError('required')">
+            Processor is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+        <br />
+        <mat-form-field appearance="fill">
+          <mat-label>RAM</mat-label>
+          <input matInput formControlName="ram" placeholder="RAM">
+          <mat-error *ngIf="computerForm.controls['ram'].hasError('required')">
+            RAM is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+        <br />
+        <mat-form-field appearance="fill">
+          <mat-label>Storage</mat-label>
+          <input matInput formControlName="storage" placeholder="Storage">
+          <mat-error *ngIf="computerForm.controls['storage'].hasError('required')">
+            Storage is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+      </mat-card-content>
+      <br />
+      <mat-card-actions>
+        <button mat-raised-button color="primary" type="submit">Add Computer</button>
+        <button mat-button type="button" (click)="updateComputer()" [disabled]="!computerForm.value.id">Update
+          Computer</button>
+        <button mat-button type="button" (click)="deleteComputer()" [disabled]="!computerForm.value.id">Delete
+          Computer</button>
+      </mat-card-actions>
+    </mat-card>
+  </form>
 </section>

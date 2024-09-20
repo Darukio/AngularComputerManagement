@@ -1,148 +1,121 @@
 {
-    "computers": [
-        {
-            "id": 1,
-            "brand": "Dell",
-            "model": "Inspiron 15 3000",
-            "processor": "Intel Core i3",
-            "ram": "8GB",
-            "storage": "256GB SSD",
-            "entryDate": "2021-01-01"
-        },
-        {
-            "id": 2,
-            "brand": "HP",
-            "model": "Pavilion x360",
-            "processor": "Intel Core i5",
-            "ram": "16GB",
-            "storage": "512GB SSD",
-            "entryDate": "2021-02-15"
-        },
-        {
-            "id": 3,
-            "brand": "Apple",
-            "model": "MacBook Pro 13",
-            "processor": "Apple M1",
-            "ram": "8GB",
-            "storage": "256GB SSD",
-            "entryDate": "2021-03-20"
-        },
-        {
-            "id": 4,
-            "brand": "Acer",
-            "model": "Aspire 5",
-            "processor": "AMD Ryzen 5",
-            "ram": "8GB",
-            "storage": "1TB HDD",
-            "entryDate": "2021-04-10"
-        },
-        {
-            "id": 5,
-            "brand": "Lenovo",
-            "model": "ThinkPad X1",
-            "processor": "Intel Core i7",
-            "ram": "16GB",
-            "storage": "512GB SSD",
-            "entryDate": "2021-05-05"
-        },
-        {
-            "id": 6,
-            "brand": "Asus",
-            "model": "ZenBook 14",
-            "processor": "Intel Core i7",
-            "ram": "16GB",
-            "storage": "1TB SSD",
-            "entryDate": "2021-06-12"
-        },
-        {
-            "id": 7,
-            "brand": "Microsoft",
-            "model": "Surface Laptop 4",
-            "processor": "Intel Core i5",
-            "ram": "8GB",
-            "storage": "256GB SSD",
-            "entryDate": "2021-07-22"
-        },
-        {
-            "id": 8,
-            "brand": "Samsung",
-            "model": "Galaxy Book Pro",
-            "processor": "Intel Core i5",
-            "ram": "8GB",
-            "storage": "512GB SSD",
-            "entryDate": "2021-08-18"
-        },
-        {
-            "id": 9,
-            "brand": "Razer",
-            "model": "Blade 15",
-            "processor": "Intel Core i7",
-            "ram": "16GB",
-            "storage": "1TB SSD",
-            "entryDate": "2021-09-30"
-        },
-        {
-            "id": 10,
-            "brand": "MSI",
-            "model": "GE76 Raider",
-            "processor": "Intel Core i9",
-            "ram": "32GB",
-            "storage": "1TB SSD",
-            "entryDate": "2021-10-25"
-        },
-        {
-            "id": 11,
-            "brand": "Dell",
-            "model": "XPS 13",
-            "processor": "Intel Core i5",
-            "ram": "8GB",
-            "storage": "512GB SSD",
-            "entryDate": "2021-11-05"
-        },
-        {
-            "id": 12,
-            "brand": "Dell",
-            "model": "Vostro 15",
-            "processor": "Intel Core i7",
-            "ram": "16GB",
-            "storage": "1TB SSD",
-            "entryDate": "2021-12-15"
-        },
-        {
-            "id": 13,
-            "brand": "HP",
-            "model": "Spectre x360",
-            "processor": "Intel Core i7",
-            "ram": "16GB",
-            "storage": "1TB SSD",
-            "entryDate": "2021-07-01"
-        },
-        {
-            "id": 14,
-            "brand": "Asus",
-            "model": "VivoBook 15",
-            "processor": "Intel Core i5",
-            "ram": "8GB",
-            "storage": "512GB SSD",
-            "entryDate": "2021-08-25"
-        },
-        {
-            "id": 15,
-            "brand": "Asus",
-            "model": "ROG Strix G15",
-            "processor": "AMD Ryzen 7",
-            "ram": "16GB",
-            "storage": "1TB SSD",
-            "entryDate": "2021-09-15"
-        },
-        {
-            "id": 16,
-            "brand": "Asus",
-            "model": "TUF Gaming A15",
-            "processor": "AMD Ryzen 5",
-            "ram": "16GB",
-            "storage": "512GB SSD",
-            "entryDate": "2021-10-05"
-        }
-    ]
+  "computers": [
+    {
+      "id": "1",
+      "brand": "Dell",
+      "model": "Inspiron 15 3000",
+      "processor": "Intel Core i3",
+      "ram": "8GB",
+      "storage": "256GB SSD",
+      "entryDate": "2021-01-01"
+    },
+    {
+      "id": "2",
+      "brand": "HP",
+      "model": "Pavilion x360",
+      "processor": "Intel Core i5",
+      "ram": "16GB",
+      "storage": "512GB SSD",
+      "entryDate": "2021-02-15"
+    },
+    {
+      "id": "3",
+      "brand": "Apple",
+      "model": "MacBook Pro 13",
+      "processor": "Apple M1",
+      "ram": "8GB",
+      "storage": "256GB SSD",
+      "entryDate": "2021-03-20"
+    },
+    {
+      "id": "4",
+      "brand": "Acer",
+      "model": "Aspire 5",
+      "processor": "AMD Ryzen 5",
+      "ram": "8GB",
+      "storage": "1TB HDD",
+      "entryDate": "2021-04-10"
+    },
+    {
+      "id": "6",
+      "brand": "Asus",
+      "model": "ZenBook 14",
+      "processor": "Intel Core i7",
+      "ram": "16GB",
+      "storage": "1TB SSD",
+      "entryDate": "2021-06-12"
+    },
+    {
+      "id": "7",
+      "brand": "Microsoft",
+      "model": "Surface Laptop 4",
+      "processor": "Intel Core i5",
+      "ram": "8GB",
+      "storage": "256GB SSD",
+      "entryDate": "2021-07-22"
+    },
+    {
+      "id": "8",
+      "brand": "Samsung",
+      "model": "Galaxy Book Pro",
+      "processor": "Intel Core i5",
+      "ram": "8GB",
+      "storage": "512GB SSD",
+      "entryDate": "2021-08-18"
+    },
+    {
+      "id": "9",
+      "brand": "Razer",
+      "model": "Blade 15",
+      "processor": "Intel Core i7",
+      "ram": "16GB",
+      "storage": "1TB SSD",
+      "entryDate": "2021-09-30"
+    },
+    {
+      "id": "11",
+      "brand": "Dell",
+      "model": "XPS 13",
+      "processor": "Intel Core i5",
+      "ram": "8GB",
+      "storage": "512GB SSD",
+      "entryDate": "2021-11-05"
+    },
+    {
+      "id": "12",
+      "brand": "Dell",
+      "model": "Vostro 15",
+      "processor": "Intel Core i7",
+      "ram": "16GB",
+      "storage": "1TB SSD",
+      "entryDate": "2021-12-15"
+    },
+    {
+      "id": "13",
+      "brand": "HP",
+      "model": "Spectre x360",
+      "processor": "Intel Core i7",
+      "ram": "16GB",
+      "storage": "1TB SSD",
+      "entryDate": "2021-07-01"
+    },
+    {
+      "id": "14",
+      "brand": "Asus",
+      "model": "VivoBook 15",
+      "processor": "Intel Core i5",
+      "ram": "8GB",
+      "storage": "512GB SSD",
+      "entryDate": "2021-08-25"
+    },
+    {
+      "id": "15",
+      "brand": "Asus",
+      "model": "ROG Strix G15",
+      "processor": "AMD Ryzen 7",
+      "ram": "16GB",
+      "storage": "1TB SSD",
+      "entryDate": "2021-09-15"
+    }
+  ]
 }
